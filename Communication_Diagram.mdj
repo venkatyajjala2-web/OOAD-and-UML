@@ -1,0 +1,533 @@
+{
+  "_type": "Project",
+  "_id": "9ed0d62e990a4191abbe3b758ca9cd52",
+  "name": "Police FIR Management System - Communication Diagram",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "ecb015c8e8d24fe29f983ce8f2e163f0",
+      "_parent": {
+        "$ref": "9ed0d62e990a4191abbe3b758ca9cd52"
+      },
+      "name": "Police FIR Management System",
+      "ownedElements": [
+        {
+          "_type": "UMLObject",
+          "_id": "fbc20d99f6da48a58c4edb7a47deb723",
+          "_parent": {
+            "$ref": "ecb015c8e8d24fe29f983ce8f2e163f0"
+          },
+          "name": "citizen:Citizen",
+          "ownedElements": []
+        },
+        {
+          "_type": "UMLObject",
+          "_id": "4704e3d0fb0d46699a930be86f9cd156",
+          "_parent": {
+            "$ref": "ecb015c8e8d24fe29f983ce8f2e163f0"
+          },
+          "name": "portal:WebApp",
+          "ownedElements": []
+        },
+        {
+          "_type": "UMLObject",
+          "_id": "dd248a20e6914e939c4d8bb79aedd4f2",
+          "_parent": {
+            "$ref": "ecb015c8e8d24fe29f983ce8f2e163f0"
+          },
+          "name": "firSvc:FIRService",
+          "ownedElements": []
+        },
+        {
+          "_type": "UMLObject",
+          "_id": "f90b03c38187407a8862151312b6ea86",
+          "_parent": {
+            "$ref": "ecb015c8e8d24fe29f983ce8f2e163f0"
+          },
+          "name": "officer:PoliceOfficer",
+          "ownedElements": []
+        },
+        {
+          "_type": "UMLObject",
+          "_id": "7bafd9fe5fdd47a1bb090f6fd643d0e3",
+          "_parent": {
+            "$ref": "ecb015c8e8d24fe29f983ce8f2e163f0"
+          },
+          "name": "db:Database",
+          "ownedElements": []
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "127ed9ad15964c49a318f7959c21c1eb",
+          "_parent": {
+            "$ref": "ecb015c8e8d24fe29f983ce8f2e163f0"
+          },
+          "name": "1: submit()",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "2b59f25767564b8f97811b52bcdb4c91",
+            "_parent": {
+              "$ref": "127ed9ad15964c49a318f7959c21c1eb"
+            },
+            "reference": {
+              "$ref": "fbc20d99f6da48a58c4edb7a47deb723"
+            },
+            "aggregation": "none",
+            "multiplicity": ""
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "eed9a5462e6d4da2bf2484820b56d076",
+            "_parent": {
+              "$ref": "127ed9ad15964c49a318f7959c21c1eb"
+            },
+            "reference": {
+              "$ref": "4704e3d0fb0d46699a930be86f9cd156"
+            },
+            "aggregation": "none",
+            "multiplicity": ""
+          },
+          "ownedElements": []
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "e9273077f7f44d6c8162547bc4b764c8",
+          "_parent": {
+            "$ref": "ecb015c8e8d24fe29f983ce8f2e163f0"
+          },
+          "name": "2: validate()",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "4857e4595bfc4f359c0afe8af5781596",
+            "_parent": {
+              "$ref": "e9273077f7f44d6c8162547bc4b764c8"
+            },
+            "reference": {
+              "$ref": "4704e3d0fb0d46699a930be86f9cd156"
+            },
+            "aggregation": "none",
+            "multiplicity": ""
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "4c4f1cf6d6804f11a5de1aca889bbc15",
+            "_parent": {
+              "$ref": "e9273077f7f44d6c8162547bc4b764c8"
+            },
+            "reference": {
+              "$ref": "dd248a20e6914e939c4d8bb79aedd4f2"
+            },
+            "aggregation": "none",
+            "multiplicity": ""
+          },
+          "ownedElements": []
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "a3d3defa1ffa4c1f9191d39117b1fb2c",
+          "_parent": {
+            "$ref": "ecb015c8e8d24fe29f983ce8f2e163f0"
+          },
+          "name": "3: assign()",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "7feefc41348841369d3081344419b466",
+            "_parent": {
+              "$ref": "a3d3defa1ffa4c1f9191d39117b1fb2c"
+            },
+            "reference": {
+              "$ref": "4704e3d0fb0d46699a930be86f9cd156"
+            },
+            "aggregation": "none",
+            "multiplicity": ""
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "fc1f24f949804f30a5916676a31d70d6",
+            "_parent": {
+              "$ref": "a3d3defa1ffa4c1f9191d39117b1fb2c"
+            },
+            "reference": {
+              "$ref": "f90b03c38187407a8862151312b6ea86"
+            },
+            "aggregation": "none",
+            "multiplicity": ""
+          },
+          "ownedElements": []
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "7906cc4571e541c099ca1e929b7400c5",
+          "_parent": {
+            "$ref": "ecb015c8e8d24fe29f983ce8f2e163f0"
+          },
+          "name": "4: save()",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "7d1d570fce104affa5b8fd9cc449b960",
+            "_parent": {
+              "$ref": "7906cc4571e541c099ca1e929b7400c5"
+            },
+            "reference": {
+              "$ref": "f90b03c38187407a8862151312b6ea86"
+            },
+            "aggregation": "none",
+            "multiplicity": ""
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "65ebe09e67454d1f96d82d2649535aa9",
+            "_parent": {
+              "$ref": "7906cc4571e541c099ca1e929b7400c5"
+            },
+            "reference": {
+              "$ref": "7bafd9fe5fdd47a1bb090f6fd643d0e3"
+            },
+            "aggregation": "none",
+            "multiplicity": ""
+          },
+          "ownedElements": []
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "a6ff6f7af20246aea9f6ecede595d233",
+          "_parent": {
+            "$ref": "ecb015c8e8d24fe29f983ce8f2e163f0"
+          },
+          "name": "5: status",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "262eb294d2554fdcb0f8cd42812f98ae",
+            "_parent": {
+              "$ref": "a6ff6f7af20246aea9f6ecede595d233"
+            },
+            "reference": {
+              "$ref": "dd248a20e6914e939c4d8bb79aedd4f2"
+            },
+            "aggregation": "none",
+            "multiplicity": ""
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "24dcfc6ca59f4b82bd87dc3a13971257",
+            "_parent": {
+              "$ref": "a6ff6f7af20246aea9f6ecede595d233"
+            },
+            "reference": {
+              "$ref": "7bafd9fe5fdd47a1bb090f6fd643d0e3"
+            },
+            "aggregation": "none",
+            "multiplicity": ""
+          },
+          "ownedElements": []
+        },
+        {
+          "_type": "UMLObjectDiagram",
+          "_id": "547f3b0e57c14bacb610e4f11ad2bd31",
+          "_parent": {
+            "$ref": "ecb015c8e8d24fe29f983ce8f2e163f0"
+          },
+          "name": "FIR Communication Diagram",
+          "defaultDiagram": true,
+          "ownedViews": [
+            {
+              "_type": "UMLObjectView",
+              "_id": "0bcd1c69894b492aafea1bf1ebcf4b96",
+              "_parent": {
+                "$ref": "547f3b0e57c14bacb610e4f11ad2bd31"
+              },
+              "model": {
+                "$ref": "fbc20d99f6da48a58c4edb7a47deb723"
+              },
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "db7b536303354f109873d1cf8c71620b",
+                  "_parent": {
+                    "$ref": "0bcd1c69894b492aafea1bf1ebcf4b96"
+                  },
+                  "text": "citizen:Citizen",
+                  "font": "Arial;19;1",
+                  "left": 88,
+                  "top": 138,
+                  "width": 240,
+                  "height": 104,
+                  "horizontalAlignment": 1,
+                  "verticalAlignment": 5
+                }
+              ],
+              "nameLabel": {
+                "$ref": "db7b536303354f109873d1cf8c71620b"
+              },
+              "font": "Arial;15;1",
+              "left": 80,
+              "top": 130,
+              "width": 256,
+              "height": 120,
+              "lineColor": "#3987A8",
+              "fillColor": "#DCEBFF",
+              "fontColor": "#20364D",
+              "containerChangeable": true
+            },
+            {
+              "_type": "UMLObjectView",
+              "_id": "eca490e0b87b4f7c8267b37690d0b68a",
+              "_parent": {
+                "$ref": "547f3b0e57c14bacb610e4f11ad2bd31"
+              },
+              "model": {
+                "$ref": "4704e3d0fb0d46699a930be86f9cd156"
+              },
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "d1d21bc39c1f4e82bec2c99959521b0f",
+                  "_parent": {
+                    "$ref": "eca490e0b87b4f7c8267b37690d0b68a"
+                  },
+                  "text": "portal:WebApp",
+                  "font": "Arial;19;1",
+                  "left": 486,
+                  "top": 102,
+                  "width": 240,
+                  "height": 106,
+                  "horizontalAlignment": 1,
+                  "verticalAlignment": 5
+                }
+              ],
+              "nameLabel": {
+                "$ref": "d1d21bc39c1f4e82bec2c99959521b0f"
+              },
+              "font": "Arial;15;1",
+              "left": 478,
+              "top": 94,
+              "width": 256,
+              "height": 122,
+              "lineColor": "#3987A8",
+              "fillColor": "#D0F8E7",
+              "fontColor": "#20364D",
+              "containerChangeable": true
+            },
+            {
+              "_type": "UMLObjectView",
+              "_id": "a17fd43e4800475aa26665c60b949e09",
+              "_parent": {
+                "$ref": "547f3b0e57c14bacb610e4f11ad2bd31"
+              },
+              "model": {
+                "$ref": "dd248a20e6914e939c4d8bb79aedd4f2"
+              },
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "18d2fdff17264941b1836b51f93ef902",
+                  "_parent": {
+                    "$ref": "a17fd43e4800475aa26665c60b949e09"
+                  },
+                  "text": "firSvc:FIRService",
+                  "font": "Arial;19;1",
+                  "left": 910,
+                  "top": 138,
+                  "width": 240,
+                  "height": 104,
+                  "horizontalAlignment": 1,
+                  "verticalAlignment": 5
+                }
+              ],
+              "nameLabel": {
+                "$ref": "18d2fdff17264941b1836b51f93ef902"
+              },
+              "font": "Arial;15;1",
+              "left": 902,
+              "top": 130,
+              "width": 256,
+              "height": 120,
+              "lineColor": "#3987A8",
+              "fillColor": "#FBE6F3",
+              "fontColor": "#20364D",
+              "containerChangeable": true
+            },
+            {
+              "_type": "UMLObjectView",
+              "_id": "feeb03d7163b4769a7fdec3bb86e2ff5",
+              "_parent": {
+                "$ref": "547f3b0e57c14bacb610e4f11ad2bd31"
+              },
+              "model": {
+                "$ref": "f90b03c38187407a8862151312b6ea86"
+              },
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "8b562f34c50e443fa030532d049bd8e4",
+                  "_parent": {
+                    "$ref": "feeb03d7163b4769a7fdec3bb86e2ff5"
+                  },
+                  "text": "officer:PoliceOfficer",
+                  "font": "Arial;19;1",
+                  "left": 486,
+                  "top": 492,
+                  "width": 240,
+                  "height": 106,
+                  "horizontalAlignment": 1,
+                  "verticalAlignment": 5
+                }
+              ],
+              "nameLabel": {
+                "$ref": "8b562f34c50e443fa030532d049bd8e4"
+              },
+              "font": "Arial;15;1",
+              "left": 478,
+              "top": 484,
+              "width": 256,
+              "height": 122,
+              "lineColor": "#3987A8",
+              "fillColor": "#FFF3C4",
+              "fontColor": "#20364D",
+              "containerChangeable": true
+            },
+            {
+              "_type": "UMLObjectView",
+              "_id": "05e4e19319ee40f9838fc2791fd82cfe",
+              "_parent": {
+                "$ref": "547f3b0e57c14bacb610e4f11ad2bd31"
+              },
+              "model": {
+                "$ref": "7bafd9fe5fdd47a1bb090f6fd643d0e3"
+              },
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "975f133760da457091d9b836b1b47397",
+                  "_parent": {
+                    "$ref": "05e4e19319ee40f9838fc2791fd82cfe"
+                  },
+                  "text": "db:Database",
+                  "font": "Arial;19;1",
+                  "left": 910,
+                  "top": 492,
+                  "width": 240,
+                  "height": 106,
+                  "horizontalAlignment": 1,
+                  "verticalAlignment": 5
+                }
+              ],
+              "nameLabel": {
+                "$ref": "975f133760da457091d9b836b1b47397"
+              },
+              "font": "Arial;15;1",
+              "left": 902,
+              "top": 484,
+              "width": 256,
+              "height": 122,
+              "lineColor": "#3987A8",
+              "fillColor": "#EAE6FF",
+              "fontColor": "#20364D",
+              "containerChangeable": true
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "05d667b8f719421ead6e0400b6a951a2",
+              "_parent": {
+                "$ref": "547f3b0e57c14bacb610e4f11ad2bd31"
+              },
+              "model": {
+                "$ref": "127ed9ad15964c49a318f7959c21c1eb"
+              },
+              "tail": {
+                "$ref": "0bcd1c69894b492aafea1bf1ebcf4b96"
+              },
+              "head": {
+                "$ref": "eca490e0b87b4f7c8267b37690d0b68a"
+              },
+              "lineStyle": 1,
+              "points": "410:180;478:165",
+              "font": "Arial;14;1",
+              "showName": true
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "02b5c779a7b3464b83ef29d37f24a990",
+              "_parent": {
+                "$ref": "547f3b0e57c14bacb610e4f11ad2bd31"
+              },
+              "model": {
+                "$ref": "e9273077f7f44d6c8162547bc4b764c8"
+              },
+              "tail": {
+                "$ref": "eca490e0b87b4f7c8267b37690d0b68a"
+              },
+              "head": {
+                "$ref": "a17fd43e4800475aa26665c60b949e09"
+              },
+              "lineStyle": 1,
+              "points": "734:154;902:180",
+              "font": "Arial;14;1",
+              "showName": true
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "2fe19d2712b84b7aacf688dc072c069b",
+              "_parent": {
+                "$ref": "547f3b0e57c14bacb610e4f11ad2bd31"
+              },
+              "model": {
+                "$ref": "a3d3defa1ffa4c1f9191d39117b1fb2c"
+              },
+              "tail": {
+                "$ref": "eca490e0b87b4f7c8267b37690d0b68a"
+              },
+              "head": {
+                "$ref": "feeb03d7163b4769a7fdec3bb86e2ff5"
+              },
+              "lineStyle": 1,
+              "points": "606:216;606:484",
+              "font": "Arial;14;1",
+              "showName": true
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "3d0106c123654bb9b0e4c6e7dabcd290",
+              "_parent": {
+                "$ref": "547f3b0e57c14bacb610e4f11ad2bd31"
+              },
+              "model": {
+                "$ref": "7906cc4571e541c099ca1e929b7400c5"
+              },
+              "tail": {
+                "$ref": "feeb03d7163b4769a7fdec3bb86e2ff5"
+              },
+              "head": {
+                "$ref": "05e4e19319ee40f9838fc2791fd82cfe"
+              },
+              "lineStyle": 1,
+              "points": "734:545;902:545",
+              "font": "Arial;14;1",
+              "showName": true
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "e6fbe754e30041c58f9d5c14b7611ca5",
+              "_parent": {
+                "$ref": "547f3b0e57c14bacb610e4f11ad2bd31"
+              },
+              "model": {
+                "$ref": "a6ff6f7af20246aea9f6ecede595d233"
+              },
+              "tail": {
+                "$ref": "a17fd43e4800475aa26665c60b949e09"
+              },
+              "head": {
+                "$ref": "05e4e19319ee40f9838fc2791fd82cfe"
+              },
+              "lineStyle": 1,
+              "points": "1030:250;1030:484",
+              "font": "Arial;14;1",
+              "showName": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
